@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,11 +9,21 @@
       src="https://kit.fontawesome.com/add6e03308.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- Header Section -->
-    <section class="container mx-auto px-16 lg:px-36 lg:flex pt-10 mb-28">
+    <header class="container mx-auto px-16 lg:px-36 lg:flex pt-10 mb-28">
       <!--banner title -->
       <div class="flex items-center">
         <div>
@@ -56,10 +66,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </header>
 
     <!-- Featured Section -->
-    <section class="container mx-auto px-16 lg:px-32 mb-28">
+    <section class="container mx-auto px-16 lg:px-32 mb-32">
       <div class="flex justify-center mb-5">
         <div class="text-center w-5/6">
           <h1 class="text-5xl font-bold mb-5">Our Featured Products</h1>
@@ -71,26 +81,65 @@
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:h-80">
-        <div class="bg-slate-100 text-center p-5">
-          <img class="mx-auto" src="./Images/kindpng_2942602 1.png" alt="" />
-          <h1 class="text-2xl font-bold">Milk Tea</h1>
-          <p>Creamer could be replaced by fresh milk</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:h-96">
+        <!-- Card with centered content and paddings -->
+        <!-- https://daisyui.com/components/card/ -->
+
+        <div class="card bg-slate-100 w-84 bg-base-100">
+          <figure class="px-10 pt-10">
+            <img
+              src="./Images/kindpng_2942602 1.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-2xl font-bold">Milk Tea</h2>
+            <p>Creamer could be replaced by fresh milk</p>
+          </div>
         </div>
-        <div class="bg-slate-100 text-center p-5">
-          <img class="mx-auto" src="./Images/kindpng_535453 1.png" alt="" />
-          <h1 class="text-2xl font-bold">Black Tea</h1>
-          <p>Creamer could be replaced by fresh milk</p>
+
+        <div class="card bg-slate-100 w-84 bg-base-100">
+          <figure class="px-10 pt-10">
+            <img
+              src="./Images/kindpng_535453 1.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-2xl font-bold">Black Tea</h2>
+            <p>Creamer could be replaced by fresh milk</p>
+          </div>
         </div>
-        <div class="bg-slate-100 text-center p-5">
-          <img class="mx-auto" src="./Images/kindpng_1701578 1.png" alt="" />
-          <h1 class="text-2xl font-bold">Lemon Tea</h1>
-          <p>Creamer could be replaced by fresh milk</p>
+
+        <div class="card bg-slate-100 w-84 bg-base-100">
+          <figure class="px-10 pt-10">
+            <img
+              src="./Images/kindpng_1701578 1.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-2xl font-bold">Lemon Tea</h2>
+            <p>Creamer could be replaced by fresh milk</p>
+          </div>
         </div>
-        <div class="bg-slate-100 text-center p-5">
-          <img class="mx-auto" src="./Images/kindpng_3941619 1.png" alt="" />
-          <h1 class="text-2xl font-bold">Green Tea</h1>
-          <p>Creamer could be replaced by fresh milk</p>
+
+        <div class="card bg-slate-100 w-84 bg-base-100">
+          <figure class="px-10 pt-10">
+            <img
+              src=" ./Images/kindpng_3941619 1.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-2xl font-bold">Green Tea</h2>
+            <p>Creamer could be replaced by fresh milk</p>
+          </div>
         </div>
       </div>
     </section>
@@ -237,9 +286,11 @@
     </section>
 
     <!-- News and Events -->
-    <section class="container mx-auto px-16 lg:px-32 min-h-full mb-28">
+    <section
+      class="container place-content-center md:mx-auto md:px-16 lg:px-32 min-h-full mb-28"
+    >
       <div class="flex justify-center">
-        <div class="text-center md:w-3/4">
+        <div class="text-center w-80 md:w-3/4">
           <h1 class="font-semibold text-5xl mb-5">News & Events</h1>
           <p class="mb-5">
             There are many variations of passages of Lorem Ipsum available, but
@@ -250,117 +301,125 @@
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="rounded-lg border-2">
-          <img
-            class="w-5/6 mx-auto my-5"
-            src="./Images/Rectangle 14-1.png"
-            alt=""
-          />
-          <div class="p-8">
-            <small>Feb 05, 2022</small>
-            <h1 class="text-2xl font-semibold">
+      <div class="grid lg:grid-cols-3 gap-4 place-content-center">
+        <!-- Card with centered content and paddings -->
+        <!-- https://daisyui.com/components/card/ -->
+
+        <div class="card w-80 md:w-96 bg-base-100 shadow-lg border-2">
+          <figure class="px-10 pt-10">
+            <img
+              src="   ./Images/Rectangle 14-1.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body">
+            <small class="text-slate-500">Feb 05, 2022</small>
+            <h2 class="card-title text-2xl font-bold">
               Collecting 8 points for discount
-            </h1>
-            <p>
+            </h2>
+            <p class="text-slate-500">
               There are many variations of passages of Lorem Ipsum available.
             </p>
-            <h5 class="font-extrabold">Learn More</h5>
+            <h-5 class="font-extrabold mt-3">Learn More</h-5>
           </div>
         </div>
-        <div class="rounded-lg border-2">
-          <img
-            class="w-5/6 mx-auto my-5"
-            src="./Images/Rectangle 14.png"
-            alt=""
-          />
-          <div class="p-8">
-            <small>Feb 05, 2022</small>
-            <h1 class="text-2xl font-semibold">
+
+        <div class="card w-80 md:w-96 bg-base-100 shadow-lg border-2">
+          <figure class="px-10 pt-10">
+            <img
+              src="./Images/Rectangle 14.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body">
+            <small class="text-slate-500">Feb 05, 2022</small>
+            <h2 class="card-title text-2xl font-bold">
               Collecting 8 points for discount
-            </h1>
-            <p>
+            </h2>
+            <p class="text-slate-500">
               There are many variations of passages of Lorem Ipsum available.
             </p>
-            <h-5 class="font-extrabold mt-5">Learn More</h-5>
+            <h-5 class="font-extrabold mt-3">Learn More</h-5>
           </div>
         </div>
-        <div class="rounded-lg border-2">
-          <img
-            class="w-5/6 mx-auto my-5"
-            src="./Images/Rectangle 14-2.png"
-            alt=""
-          />
-          <div class="p-8">
-            <small>Feb 05, 2022</small>
-            <h1 class="text-2xl font-semibold">
+
+        <div class="card w-80 md:w-96 bg-base-100 shadow-lg border-2">
+          <figure class="px-10 pt-10">
+            <img
+              src="./Images/Rectangle 14-2.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body">
+            <small class="text-slate-500">Feb 05, 2022</small>
+            <h2 class="card-title text-2xl font-bold">
               Collecting 8 points for discount
-            </h1>
-            <p>
+            </h2>
+            <p class="text-slate-500">
               There are many variations of passages of Lorem Ipsum available.
             </p>
-            <h5 class="font-extrabold">Learn More</h5>
+            <h-5 class="font-extrabold mt-3">Learn More</h-5>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-red-50 px-16 md:px-32 min-h-full">
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="my-14">
-          <div class="mb-8"><img src="./Images/Frame.png" alt="" /></div>
+    <footer class="bg-red-50 py-14 px-10 md:px-32 min-h-full">
+      <div class="mb-8 md:flex md:justify-between">
+        <img class="mb-8" src="./Images/Frame.png" alt="" />
+        <div class="flex items-center gap-4">
+          <h4>Ready to get started?</h4>
+          <button class="bg-orange-600 px-3 py-2 text-white rounded-lg">
+            Get Started
+          </button>
+        </div>
+      </div>
 
-          <div class="grid grid-cols-2">
-            <div>
-              <h1 class="font-bold">Quick Links</h1>
-              <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Insurance</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </div>
-            <div>
-              <h1 class="font-bold">Our Service</h1>
-              <ul>
-                <li>Life Insurance</li>
-                <li>Car Insurance</li>
-                <li>Health Insurance</li>
-                <li>House Insurance</li>
-              </ul>
-            </div>
-          </div>
+      <!-- Footer with a form -->
+      <!-- https://daisyui.com/components/footer/ -->
+
+      <div class="footer text-base-content">
+        <div>
+          <span class="font-bold">Quick Links</span>
+          <a class="link link-hover">Home</a>
+          <a class="link link-hover">About Us</a>
+          <a class="link link-hover">Insurance</a>
+          <a class="link link-hover">Privacy Policy</a>
         </div>
         <div>
-          <div class="flex justify-center my-14">
-            <h4 class="flex items-center mr-14">Ready to get started?</h4>
-            <button class="bg-orange-600 px-3 py-2 text-white rounded-lg">
-              Get Started
-            </button>
-          </div>
-          <div class="grid grid-cols-2">
-            <div>
-              <h1 class="font-bold">Help</h1>
-              <ul>
-                <li>FAQs</li>
-                <li>Contact Us</li>
-              </ul>
-            </div>
-            <div>
-              <h1 class="font-bold text-3xl mb-2">
-                Subscribe to our newsletter
-              </h1>
-              <div class="flex mb-3">
-                <input
-                  class="bg-transparent border-b-2 border-black w-4/6 md:w-5/6"
-                  type="email"
-                  placeholder="Email Address"
-                />
-                <i
-                  class="p-3 fa-solid fa-chevron-right bg-orange-600 rounded-full text-white"
-                ></i>
-              </div>
+          <span class="font-bold">Our Service</span>
+          <a class="link link-hover">Life Insurance</a>
+          <a class="link link-hover">Car Insurance</a>
+          <a class="link link-hover">Health Insurance</a>
+          <a class="link link-hover">House Insurance</a>
+        </div>
+        <div>
+          <span class="font-bold">Help</span>
+          <a class="link link-hover">FAQs</a>
+          <a class="link link-hover">Contact Us</a>
+        </div>
+        <div class="place-self-end">
+          <h1 class="font-bold text-3xl mb-2">
+            Subscribe to our <br />
+            newsletter
+          </h1>
+          <div class="form-control w-80">
+            <label class="label">
+              <span class="label-text">Enter your email address</span>
+            </label>
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Email Address"
+                class="bg-transparent border-b-2 border-black w-4/6 md:w-5/6"
+              />
+              <i
+                class="p-3 fa-solid fa-chevron-right bg-orange-600 rounded-full text-white"
+              ></i>
               <div class="flex justify-between w-2/5 mb-3">
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-twitter"></i>
